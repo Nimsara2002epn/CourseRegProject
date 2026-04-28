@@ -7,9 +7,8 @@ public class User {
     private String email;
     private String phone;
     private String password;
-    private String role; // STUDENT, LECTURER, ADMIN
+    private String role; 
 
-    // Constructor
     public User(String id, String name, String email, String phone, String password, String role) {
         this.id = id;
         this.name = name;
@@ -19,10 +18,8 @@ public class User {
         this.role = role;
     }
 
-    // Default constructor
     public User() {}
 
-    // ---- Getters & Setters (Encapsulation) ----
 
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
@@ -42,24 +39,14 @@ public class User {
     public String getRole() { return role; }
     public void setRole(String role) { this.role = role; }
 
-    /**
-     * POLYMORPHISM — overridden in subclasses to show role-specific info
-     */
     public String getDisplayInformation() {
         return "User[" + role + "]: " + name + " | " + email;
     }
 
-    /**
-     * Convert to CSV line for file storage
-     * Format: id,name,email,phone,password,role
-     */
     public String toFileString() {
         return id + "," + name + "," + email + "," + phone + "," + password + "," + role;
     }
 
-    /**
-     * Create a User object from a CSV line
-     */
     public static User fromFileString(String line) {
         String[] parts = line.split(",", -1);
         if (parts.length < 6) return null;
