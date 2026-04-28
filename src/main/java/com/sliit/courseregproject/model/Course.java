@@ -4,7 +4,7 @@ public class Course {
 
     private String id;
     private String name;
-    private String code;       // e.g., SE1020
+    private String code;       
     private String departmentId;
     private String lecturerId;
     private String credits;
