@@ -1,3 +1,5 @@
+package com.studentreg.model;
+
 public class Notice {
 
     private String id;
