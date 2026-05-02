@@ -5,8 +5,8 @@ public class Notice {
     private String id;
     private String title;
     private String content;
-    private String postedDate;  // yyyy-MM-dd
-    private String postedBy;    // admin name
+    private String postedDate;  
+    private String postedBy;    
 
     public Notice() {}
 
@@ -33,7 +33,6 @@ public class Notice {
     public String getPostedBy() { return postedBy; }
     public void setPostedBy(String postedBy) { this.postedBy = postedBy; }
 
-    // Use | as separator since content may contain commas
     public String toFileString() {
         return id + "|" + title + "|" + content + "|" + postedDate + "|" + postedBy;
     }
