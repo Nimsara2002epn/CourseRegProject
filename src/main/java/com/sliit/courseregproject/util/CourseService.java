@@ -1,6 +1,6 @@
 package com.courseregproject.util;
 
-import com.courseregproject.model.Course;
+import com.courseregproject.model.User;
 import java.util.*;
 
 
@@ -8,7 +8,7 @@ public class CourseService {
 
     public static boolean addCourse(Course course) {
         if (FileHandler.valueExists(FileHandler.COURSES_FILE, 2, course.getCode())) {
-            return false; // Duplicate course code
+            return false; 
         }
         course.setId(FileHandler.generateId());
         FileHandler.appendLine(FileHandler.COURSES_FILE, course.toFileString());
