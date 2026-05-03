@@ -1,6 +1,6 @@
 package com.sliit.courseregproject.util;
 
-import com.sliit.courseregproject.model;
+import com.sliit.courseregproject.model.User;
 import java.util.*;
 
 public class UserService {
