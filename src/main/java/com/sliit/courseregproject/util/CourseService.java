@@ -1,6 +1,6 @@
-package com.courseregproject.util;
+package com.sliit.courseregproject.util;
 
-import com.courseregproject.model.User;
+import com.sliit.courseregproject.model.Course;
 import java.util.*;
 
 
