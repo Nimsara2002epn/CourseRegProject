@@ -32,4 +32,5 @@ public class Department {
         if (parts.length < 3) return null;
         return new Department(parts[0], parts[1], parts[2]);
     }
+
 }
