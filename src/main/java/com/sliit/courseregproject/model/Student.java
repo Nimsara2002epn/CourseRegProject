@@ -1,4 +1,4 @@
-package com.studentreg.model;
+package com.sliit.courseregproject.model;
 
 public class Student extends User {
 
