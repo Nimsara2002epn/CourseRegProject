@@ -1,6 +1,5 @@
 package com.sliit.courseregproject.model;
 
-
 public class Lecturer extends User {
 
     private String staffId;

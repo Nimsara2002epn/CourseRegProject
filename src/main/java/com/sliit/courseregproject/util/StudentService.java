@@ -71,6 +71,7 @@ public class StudentService {
             } else {
                 newLines.add(line);
             }
+
         }
 
         if (found) FileHandler.writeAllLines(FileHandler.STUDENTS_FILE, newLines);
