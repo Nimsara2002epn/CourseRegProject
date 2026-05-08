@@ -7,7 +7,7 @@ public class DepartmentService {
 
     public static boolean addDepartment(Department dept) {
         if (FileHandler.valueExists(FileHandler.DEPARTMENTS_FILE, 1, dept.getName())) {
-            return false; // Duplicate name
+            return false;
         }
         dept.setId(FileHandler.generateId());
         FileHandler.appendLine(FileHandler.DEPARTMENTS_FILE, dept.toFileString());
