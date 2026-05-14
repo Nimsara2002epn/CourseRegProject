@@ -169,13 +169,37 @@ public class StudentController {
             this.lecturerName = lecturerName;
         }
 
-        public String getRegistrationId() { return registrationId; }
-        public String getRegistrationDate() { return registrationDate; }
-        public String getStatus() { return status; }
-        public String getCourseName() { return courseName; }
-        public String getCourseCode() { return courseCode; }
-        public String getCredits() { return credits; }
-        public String getDepartmentName() { return departmentName; }
-        public String getLecturerName() { return lecturerName; }
+        public String getRegistrationId() {
+            return registrationId;
+        }
+
+        public String getRegistrationDate() {
+            return registrationDate;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public String getCourseName() {
+            return courseName;
+        }
+
+        public String getCourseCode() {
+            return courseCode;
+        }
+
+        public String getCredits() {
+            return credits;
+        }
+
+        public String getDepartmentName() {
+            return departmentName;
+        }
+
+        public String getLecturerName() {
+            return lecturerName;
+        }
     }
 }
+
