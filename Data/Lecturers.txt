@@ -1,1 +1,2 @@
 1778842127262_800,Pathum Nissanka,nissanka123@gmail.com,0123456789,123,LECTURER,001,Software Engineering,Nice
+1778843244708_4,Nimal Rathnayake,nimal123@gmail.com,0123456789,123,LECTURER,002,Network Engineering,Good
