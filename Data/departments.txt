@@ -1,2 +1,3 @@
 1778841121368_674,Software Engineering,Hard and not easy
 1778843050604_279,Network Engineering,Hard
+1778844243110_145,Artificial Intelligence,Include Machine Learning (ML) and Deep Learning

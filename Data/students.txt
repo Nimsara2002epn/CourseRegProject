@@ -1,3 +1,2 @@
 1778746096933_234,Sedani Nisandara,nisandara123@gmail.com,0123456789,123,STUDENT,IT25102924,AI
 1778843455415_713,Thisara Dilshan,dilshan123@gmail.com,0123456789,123,STUDENT,25102925,Network Engineering
-1778843719012_856,Kavishka Nimsarani,nimsarani123@gmail.com,0123456789,123,STUDENT,25102926,Software Engineering
