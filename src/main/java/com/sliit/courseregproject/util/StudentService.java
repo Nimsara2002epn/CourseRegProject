@@ -1,17 +1,45 @@
+
 package com.sliit.courseregproject.util;
 
 import com.sliit.courseregproject.model.Student;
 import java.util.*;
 
+
 public class StudentService {
 
     public static boolean addStudent(Student student) {
         if (FileHandler.valueExists(FileHandler.STUDENTS_FILE, 2, student.getEmail())) {
-            return false; 
+            return false;
         }
         student.setId(FileHandler.generateId());
+        if (student.getIndexNumber() == null || student.getIndexNumber().isBlank()) {
+            student.setIndexNumber(generateNextIndexNumber());
+        }
         FileHandler.appendLine(FileHandler.STUDENTS_FILE, student.toFileString());
         return true;
+    }
+
+    private static String generateNextIndexNumber() {
+        int maxNumber = 0;
+
+        for (Student student : getAllStudents()) {
+            String indexNumber = student.getIndexNumber();
+            if (indexNumber == null || indexNumber.isBlank()) {
+                continue;
+            }
+
+            String digitsOnly = indexNumber.replaceAll("\\D", "");
+            if (digitsOnly.isEmpty()) {
+                continue;
+            }
+
+            try {
+                maxNumber = Math.max(maxNumber, Integer.parseInt(digitsOnly));
+            } catch (NumberFormatException ignored) {
+            }
+        }
+
+        return String.format("%03d", maxNumber + 1);
     }
 
     public static List<Student> getAllStudents() {
@@ -71,14 +99,13 @@ public class StudentService {
             } else {
                 newLines.add(line);
             }
-
         }
 
         if (found) FileHandler.writeAllLines(FileHandler.STUDENTS_FILE, newLines);
         return found;
     }
 
-  
+
     public static List<Student> searchStudents(String keyword) {
         List<Student> results = new ArrayList<>();
         String kw = keyword.toLowerCase();
