@@ -73,7 +73,5 @@ document.addEventListener('click', function (event) {
         closeAlert(dismissAlert);
     }
 
-    if (event.target.classList.contains('modal')) {
-        event.target.classList.remove('show');
-    }
+
 });
