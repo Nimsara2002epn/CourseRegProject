@@ -60,7 +60,7 @@ function togglePassword() {
 }
 
 document.addEventListener('click', function (event) {
-    const closeButton = event.target.closest('[data-dismiss="modal"]');
+    const closeButton = event.target.closest('[data-dismiss="modal"], [data-bs-dismiss="modal"]');
     if (closeButton) {
         const modal = closeButton.closest('.modal');
         if (modal) {
