@@ -1,2 +1,3 @@
 1778810896988_41,First Admin,admin@gmail.lk,0112345678,admin123,ADMIN
 1778832145665_195,Nimsara Wickramasinghe,nimsara123@gmail.com,0123456789,123,ADMIN
+1778933243118_654,Sedani Nisandara,nisandara123@gmail.com,0123456789,123,ADMIN

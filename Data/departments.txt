@@ -1,3 +1,7 @@
-1778841121368_674,Software Engineering,Hard and not easy
+1778841121368_674,Software Engineering,Focuses on software development, programming, system design, and application engineering
 1778843050604_279,Network Engineering,Hard
 1778844243110_145,Artificial Intelligence,Include Machine Learning (ML) and Deep Learning
+1778932511091_850,Information Technology,Covers networking, databases, cybersecurity, and IT infrastructure management
+1778932682128_313,Business Management,Teaches leadership, finance, marketing, and organizational management skills
+1778932699394_642,Civil Engineering,Specializes in construction, structural design, and infrastructure development
+1778933068922_680,Cyber Security,Focuses on protecting systems, networks, and data from cyber threats
