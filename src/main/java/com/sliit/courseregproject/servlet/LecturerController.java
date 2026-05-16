@@ -1,6 +1,7 @@
 package com.sliit.courseregproject.servlet;
 
 import com.sliit.courseregproject.model.Lecturer;
+import com.sliit.courseregproject.util.DepartmentService;
 import com.sliit.courseregproject.util.LecturerService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
@@ -32,8 +33,9 @@ public class LecturerController {
     }
 
     @GetMapping("/add")
-    public String addForm(HttpSession session) {
+    public String addForm(HttpSession session, Model model) {
         if (!isAdmin(session)) return "redirect:/login";
+        model.addAttribute("departments", DepartmentService.getAllDepartments());
         return "admin/lecturer-form";
     }
 
@@ -70,6 +72,7 @@ public class LecturerController {
         Lecturer l = LecturerService.getLecturerById(id);
         if (l == null) return "redirect:/admin/lecturers";
         model.addAttribute("lecturer", l);
+        model.addAttribute("departments", DepartmentService.getAllDepartments());
         return "admin/lecturer-edit";
     }
 
