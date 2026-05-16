@@ -23,7 +23,20 @@
                 <div class="col-md-6"><label class="form-label fw-semibold">Staff ID *</label><input type="text" class="form-control" name="staffId" value="${lecturer.staffId}" required></div>
                 <div class="col-12"><label class="form-label fw-semibold">Email Address *</label><input type="email" class="form-control" name="email" value="${lecturer.email}" required></div>
                 <div class="col-md-6"><label class="form-label fw-semibold">Phone *</label><input type="text" class="form-control" name="phone" value="${lecturer.phone}" required></div>
-                <div class="col-md-6"><label class="form-label fw-semibold">Department *</label><input type="text" class="form-control" name="department" value="${lecturer.department}" required></div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Department *</label>
+                    <select class="form-select" name="department" required <c:if test="${empty departments}">disabled</c:if>>
+                        <option value="">Select a department</option>
+                        <c:forEach items="${departments}" var="department">
+                            <option value="${department.name}" <c:if test="${department.name == lecturer.department}">selected</c:if>>
+                                ${department.name}
+                            </option>
+                        </c:forEach>
+                    </select>
+                    <c:if test="${empty departments}">
+                        <small class="text-danger d-block mt-1">No departments available yet. Please add a department first.</small>
+                    </c:if>
+                </div>
                 <div class="col-12"><label class="form-label fw-semibold">Specialization *</label><input type="text" class="form-control" name="specialization" value="${lecturer.specialization}" required></div>
                 <div class="col-12"><label class="form-label fw-semibold">Password *</label><input type="password" class="form-control" name="password" value="${lecturer.password}" required></div>
             </div>

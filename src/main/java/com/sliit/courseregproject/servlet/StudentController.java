@@ -3,11 +3,7 @@ package com.sliit.courseregproject.servlet;
 import com.sliit.courseregproject.model.Course;
 import com.sliit.courseregproject.model.Registration;
 import com.sliit.courseregproject.model.Student;
-import com.sliit.courseregproject.util.CourseService;
-import com.sliit.courseregproject.util.DepartmentService;
-import com.sliit.courseregproject.util.LecturerService;
-import com.sliit.courseregproject.util.RegistrationService;
-import com.sliit.courseregproject.util.StudentService;
+import com.sliit.courseregproject.util.*;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,6 +22,7 @@ public class StudentController {
         String role = (String) session.getAttribute("userRole");
         return "ADMIN".equals(role) || "LECTURER".equals(role);
     }
+
 
     @GetMapping
     public String listStudents(HttpSession session, Model model,
@@ -78,9 +75,11 @@ public class StudentController {
         return "admin/student-view";
     }
 
+
     @GetMapping("/add")
-    public String addForm(HttpSession session) {
+    public String addForm(HttpSession session, Model model) {
         if (!hasAccess(session)) return "redirect:/login";
+        model.addAttribute("departments", DepartmentService.getAllDepartments());
         return "admin/student-form";
     }
 
@@ -109,12 +108,14 @@ public class StudentController {
         return "redirect:/admin/students";
     }
 
+
     @GetMapping("/edit/{id}")
     public String editForm(HttpSession session, @PathVariable String id, Model model) {
         if (!hasAccess(session)) return "redirect:/login";
         Student s = StudentService.getStudentById(id);
         if (s == null) return "redirect:/admin/students";
         model.addAttribute("student", s);
+        model.addAttribute("departments", DepartmentService.getAllDepartments());
         return "admin/student-edit";
     }
 
@@ -136,6 +137,7 @@ public class StudentController {
                 success ? "Student updated." : "Update failed.");
         return "redirect:/admin/students";
     }
+
 
     @GetMapping("/delete/{id}")
     public String deleteStudent(HttpSession session, @PathVariable String id, RedirectAttributes ra) {
@@ -169,37 +171,13 @@ public class StudentController {
             this.lecturerName = lecturerName;
         }
 
-        public String getRegistrationId() {
-            return registrationId;
-        }
-
-        public String getRegistrationDate() {
-            return registrationDate;
-        }
-
-        public String getStatus() {
-            return status;
-        }
-
-        public String getCourseName() {
-            return courseName;
-        }
-
-        public String getCourseCode() {
-            return courseCode;
-        }
-
-        public String getCredits() {
-            return credits;
-        }
-
-        public String getDepartmentName() {
-            return departmentName;
-        }
-
-        public String getLecturerName() {
-            return lecturerName;
-        }
+        public String getRegistrationId() { return registrationId; }
+        public String getRegistrationDate() { return registrationDate; }
+        public String getStatus() { return status; }
+        public String getCourseName() { return courseName; }
+        public String getCourseCode() { return courseCode; }
+        public String getCredits() { return credits; }
+        public String getDepartmentName() { return departmentName; }
+        public String getLecturerName() { return lecturerName; }
     }
 }
-

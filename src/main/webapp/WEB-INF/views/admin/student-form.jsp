@@ -39,7 +39,15 @@
                 </div>
                 <div class="col-md-6">
                     <label class="form-label fw-semibold">Department *</label>
-                    <input type="text" class="form-control" name="department" placeholder="e.g. Software Engineering" required>
+                    <select class="form-select" name="department" required <c:if test="${empty departments}">disabled</c:if>>
+                        <option value="">Select a department</option>
+                        <c:forEach items="${departments}" var="department">
+                            <option value="${department.name}">${department.name}</option>
+                        </c:forEach>
+                    </select>
+                    <c:if test="${empty departments}">
+                        <small class="text-danger d-block mt-1">No departments available yet. Please add a department first.</small>
+                    </c:if>
                 </div>
                 <div class="col-12">
                     <label class="form-label fw-semibold">Password *</label>

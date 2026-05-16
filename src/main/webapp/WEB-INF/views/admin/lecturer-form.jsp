@@ -22,7 +22,18 @@
                 <div class="col-md-6"><label class="form-label fw-semibold">Staff ID *</label><input type="text" class="form-control" name="staffId" placeholder="e.g. LEC/001" required></div>
                 <div class="col-12"><label class="form-label fw-semibold">Email Address *</label><input type="email" class="form-control" name="email" required></div>
                 <div class="col-md-6"><label class="form-label fw-semibold">Phone *</label><input type="text" class="form-control" name="phone" required></div>
-                <div class="col-md-6"><label class="form-label fw-semibold">Department *</label><input type="text" class="form-control" name="department" required></div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Department *</label>
+                    <select class="form-select" name="department" required <c:if test="${empty departments}">disabled</c:if>>
+                        <option value="">Select a department</option>
+                        <c:forEach items="${departments}" var="department">
+                            <option value="${department.name}">${department.name}</option>
+                        </c:forEach>
+                    </select>
+                    <c:if test="${empty departments}">
+                        <small class="text-danger d-block mt-1">No departments available yet. Please add a department first.</small>
+                    </c:if>
+                </div>
                 <div class="col-12"><label class="form-label fw-semibold">Specialization *</label><input type="text" class="form-control" name="specialization" placeholder="e.g. Object Oriented Programming" required></div>
                 <div class="col-12"><label class="form-label fw-semibold">Password *</label><input type="password" class="form-control" name="password" required></div>
             </div>
