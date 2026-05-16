@@ -35,7 +35,7 @@
                     <div class="col-6">
                         <div class="role-btn active" id="roleAdmin" onclick="selectRole('ADMIN')">
                             <i class="bi bi-shield-lock text-primary"></i>
-                            <span class="fw-semibold small">Admin / Lecturer</span>
+                            <span class="fw-semibold small">Admin</span>
                         </div>
                     </div>
                     <div class="col-6">
