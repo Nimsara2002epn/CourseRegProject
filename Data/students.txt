@@ -8,3 +8,5 @@
 1779001064171_985,Punchi Malith,malith123@gmail.com,0123456789,123,STUDENT,25102951,Business Management
 1779001305859_251,Lewis Hamilton,lewis123@gmail.com,0123456789,123,STUDENT,1,Software Engineering
 1779001353604_696,charles Leclerc,charles123@gmail.com,0123456789,123,STUDENT,25102952,Artificial Intelligence
+1779007658543_176,Bat Man,bat123@gmail.com,0123456789,123,STUDENT,25102953,Artificial Intelligence
+1779027438241_624,Dilanga Lakshan,dilanga123@gmail.com,0123456789,123,STUDENT,25102954,Artificial Intelligence
