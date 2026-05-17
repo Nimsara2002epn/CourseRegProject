@@ -39,7 +39,7 @@ public class StudentService {
             }
         }
 
-        return String.format("%03d", maxNumber + 1);
+        return String.valueOf(maxNumber + 1);
     }
 
     public static List<Student> getAllStudents() {
