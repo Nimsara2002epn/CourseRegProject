@@ -89,7 +89,6 @@ public class StudentController {
                              @RequestParam String email,
                              @RequestParam String phone,
                              @RequestParam String password,
-                             @RequestParam String indexNumber,
                              @RequestParam String department,
                              RedirectAttributes ra) {
         if (!hasAccess(session)) return "redirect:/login";
