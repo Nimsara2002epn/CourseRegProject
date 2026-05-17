@@ -57,7 +57,7 @@
                 <div class="table-responsive">
                     <table class="table table-hover mb-0">
                         <thead>
-                            <tr><th>#</th><th>Code</th><th>Course Name</th><th>Credits</th><th>Department ID</th><th>Lecturer ID</th><th>Actions</th></tr>
+                            <tr><th>#</th><th>Code</th><th>Course Name</th><th>Credits</th><th>Department</th><th>Lecturer</th><th>Actions</th></tr>
                         </thead>
                         <tbody>
                             <c:forEach items="${courses}" var="c" varStatus="loop">
@@ -66,9 +66,25 @@
                                     <td><span class="badge bg-warning text-dark">${c.code}</span></td>
                                     <td><strong>${c.name}</strong><br><small class="text-muted">${c.description}</small></td>
                                     <td>${c.credits}</td>
-                                    <td><span class="badge bg-light text-dark border">${c.departmentId}</span></td>
-                                    <td><span class="badge bg-light text-dark border">${c.lecturerId}</span></td>
                                     <td>
+                                    <c:set var="departmentName" value="Unassigned" />
+                                                                            <c:forEach items="${departments}" var="d">
+                                                                                <c:if test="${d.id == c.departmentId}">
+                                                                                    <c:set var="departmentName" value="${d.name}" />
+                                                                                </c:if>
+                                                                            </c:forEach>
+                                                                            <span class="badge bg-light text-dark border">${departmentName}</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <c:set var="lecturerName" value="Unassigned" />
+                                                                            <c:forEach items="${lecturers}" var="l">
+                                                                                <c:if test="${l.id == c.lecturerId}">
+                                                                                    <c:set var="lecturerName" value="${l.name}" />
+                                                                                </c:if>
+                                                                            </c:forEach>
+                                                                            <span class="badge bg-light text-dark border">${lecturerName}</span>
+                                                                        </td>
+                                                                        <td>
                                         <a href="/admin/courses/edit/${c.id}" class="btn btn-sm btn-outline-warning me-1">✏️ Edit</a>
                                         <button class="btn btn-sm btn-outline-danger" onclick="confirmDelete('/admin/courses/delete/${c.id}', '${c.name}')">🗑️ Delete</button>
                                     </td>
