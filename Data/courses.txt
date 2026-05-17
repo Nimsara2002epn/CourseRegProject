@@ -1,2 +1,4 @@
-1778842570766_760,Object Oriented Programming,SE1020,1778841121368_674,1778842127262_800,4,Nice
+1778842570766_760,Object Oriented Programming,SE1020,1778841121368_674,1778842127262_800,4,Introduction to object-oriented concepts including classes, inheritance, polymorphism, and Java programming
 1778843278691_469,Data Communication Networks,IE1030,1778843050604_279,1778843244708_4,4,hard hard
+1778933711134_224,Cyber Security Fundamentals,CS3100,1778933068922_680,1778933139817_731,4,Covers ethical hacking, encryption, network protection, and cyber threats
+1778933812258_722,Mobile Application Development,SE2030,1778841121368_674,1778932953712_103,4,Focuses on Android application development using Java and Kotlin

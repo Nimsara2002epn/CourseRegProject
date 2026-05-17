@@ -2,3 +2,6 @@
 1778843455415_713,Thisara Dilshan,dilshan123@gmail.com,0123456789,123,STUDENT,25102925,Network Engineering
 1778844748082_593,Buwaneka,buwaneka@gmail.com,0723468902,123,STUDENT,IT25100067,Artificial intelligence
 1778914115016_765,Sathushka,sathushka@gmail.com,0123456789,123,STUDENT,25102926,Network Engineering
+1778933345490_356,Chathuka Dissanayake,chathuka123@gmail.com,0123456789,123,STUDENT,25102927,Cyber Security
+1778933389752_520,Chithara Dilneth,chithara123@gmail.com,0123456789,123,STUDENT,25102928,Civil Engineering
+1778933413434_1,Sithmi Nathara,nathara123@gmail.com,0123456789,123,STUDENT,25102929,Business Management

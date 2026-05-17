@@ -1,3 +1,6 @@
-1778842127262_800,Pathum Nissanka,nissanka123@gmail.com,0123456789,123,LECTURER,001,Software Engineering,Nice
-1778843244708_4,Nimal Rathnayake,nimal123@gmail.com,0123456789,123,LECTURER,002,Network Engineering,Good
-1778913487585_142,samadhi,samadhi123@gmail.com,0123456789,123,LECTURER,003,Network Engineering,Nice
+1778842127262_800,Pathum Nissanka,nissanka123@gmail.com,0123456789,123,LECTURER,001,Software Engineering,Object Oriented Programming
+1778843244708_4,Nimal Rathnayake,nimal123@gmail.com,0123456789,123,LECTURER,002,Information Technology,Database Management Systems
+1778913487585_142,Samadhi Rathnayake,samadhi123@gmail.com,0123456789,123,LECTURER,003,Business Management,Business
+1778932953712_103,Kasun Kalhara,kalhara123@gmail.com,0123456789,123,LECTURER,004,Software Engineering,Object Oriented Programming
+1778933023909_2,Shanilka Thathsara,shanilka123@gmail.com,0123456789,123,LECTURER,005,Information Technology,Database Management Systems
+1778933139817_731,Nimal Ajantha,ajantha123@gmail.com,0123456789,123,LECTURER,006,Cyber Security,Ethical Hacking and Security
