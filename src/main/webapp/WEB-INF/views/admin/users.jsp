@@ -15,7 +15,7 @@
 <c:if test="${not empty error}"><div class="alert alert-danger alert-dismissible fade show"><i class="bi bi-exclamation-triangle-fill me-2"></i>${error}<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div></c:if>
 
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h4 class="fw-bold mb-0"><i class="bi bi-shield-person text-dark me-2"></i>System Users (Admin / Lecturer)</h4>
+    <h4 class="fw-bold mb-0"><i class="bi bi-shield-person text-dark me-2"></i>System Users</h4>
     <a href="/admin/users/add" class="btn btn-dark"><i class="bi bi-person-plus me-1"></i>Add User</a>
 </div>
 
