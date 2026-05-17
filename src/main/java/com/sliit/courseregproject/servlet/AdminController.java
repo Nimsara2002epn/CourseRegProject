@@ -61,7 +61,6 @@ public class AdminController {
                           @RequestParam String email,
                           @RequestParam String phone,
                           @RequestParam String password,
-                          @RequestParam String role,
                           RedirectAttributes ra) {
         if (!isAdmin(session)) return "redirect:/login";
 
@@ -70,7 +69,7 @@ public class AdminController {
         user.setEmail(email);
         user.setPhone(phone);
         user.setPassword(password);
-        user.setRole(role);
+        user.setRole("ADMIN");
 
         boolean success = UserService.addUser(user);
         if (success) {
@@ -98,11 +97,10 @@ public class AdminController {
                            @RequestParam String email,
                            @RequestParam String phone,
                            @RequestParam String password,
-                           @RequestParam String role,
                            RedirectAttributes ra) {
         if (!isAdmin(session)) return "redirect:/login";
 
-        User user = new User(id, name, email, phone, password, role);
+        User user = new User(id, name, email, phone, password, "ADMIN");
         boolean success = UserService.updateUser(user);
         ra.addFlashAttribute(success ? "success" : "error",
                 success ? "User updated successfully." : "Update failed.");

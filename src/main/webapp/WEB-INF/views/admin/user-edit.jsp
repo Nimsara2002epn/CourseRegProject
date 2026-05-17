@@ -24,10 +24,8 @@
                 <div class="col-md-6"><label class="form-label fw-semibold">Phone *</label><input type="text" class="form-control" name="phone" value="${user.phone}" required></div>
                 <div class="col-md-6">
                     <label class="form-label fw-semibold">Role *</label>
-                    <select class="form-select" name="role" required>
-                        <option value="ADMIN" <c:if test="${user.role == 'ADMIN'}">selected</c:if>>Admin</option>
-                        <option value="LECTURER" <c:if test="${user.role == 'LECTURER'}">selected</c:if>>Lecturer</option>
-                    </select>
+                    <input type="text" class="form-control" value="Admin" readonly>
+                    <input type="hidden" name="role" value="ADMIN">
                 </div>
                 <div class="col-12"><label class="form-label fw-semibold">Password *</label><input type="password" class="form-control" name="password" value="${user.password}" required></div>
             </div>
