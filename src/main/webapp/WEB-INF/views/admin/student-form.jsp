@@ -21,14 +21,10 @@
     <div class="card-body p-4">
         <form method="post" action="/admin/students/add">
             <div class="row g-3">
-                <div class="col-md-6">
-                    <label class="form-label fw-semibold">Full Name *</label>
-                    <input type="text" class="form-control" name="name" placeholder="e.g. Nimsara Perera" required>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label fw-semibold">Index Number *</label>
-                    <input type="text" class="form-control" name="indexNumber" placeholder="e.g. IT/2022/001" required>
-                </div>
+                <div class="col-12">
+    <label class="form-label fw-semibold">Full Name *</label>
+    <input type="text" class="form-control" name="name" placeholder="e.g. Nimsara Perera" required>
+</div>
                 <div class="col-12">
                     <label class="form-label fw-semibold">Email Address *</label>
                     <input type="email" class="form-control" name="email" placeholder="student@university.lk" required>
