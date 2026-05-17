@@ -98,7 +98,6 @@ public class StudentController {
         s.setEmail(email);
         s.setPhone(phone);
         s.setPassword(password);
-        s.setIndexNumber(indexNumber);
         s.setDepartment(department);
 
         boolean success = StudentService.addStudent(s);
