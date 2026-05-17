@@ -6,3 +6,5 @@
 1778933389752_520,Chithara Dilneth,chithara123@gmail.com,0123456789,123,STUDENT,25102928,Civil Engineering
 1778933413434_1,Sithmi Nathara,nathara123@gmail.com,0123456789,123,STUDENT,25102929,Business Management
 1779001064171_985,Punchi Malith,malith123@gmail.com,0123456789,123,STUDENT,25102951,Business Management
+1779001305859_251,Lewis Hamilton,lewis123@gmail.com,0123456789,123,STUDENT,1,Software Engineering
+1779001353604_696,charles Leclerc,charles123@gmail.com,0123456789,123,STUDENT,25102952,Artificial Intelligence
